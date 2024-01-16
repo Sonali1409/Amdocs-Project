@@ -1,0 +1,44 @@
+
+
+CREATE TABLE Transaction (
+    TransId VARCHAR(4) PRIMARY KEY,
+    Acctno INT,
+    OldBal DECIMAL(10, 2),
+    Transtype VARCHAR(10),
+    TransAmt DECIMAL(10, 2),
+    NewBal DECIMAL(10, 2),
+    TransStat VARCHAR(10)
+);
+
+
+
+
+
+INSERT INTO Transaction (TransId, Acctno, OldBal, Transtype, TransAmt) VALUES ('T001',2001, 5000.00, 'Withdrawal', 5500.00);
+INSERT INTO Transaction (TransId, Acctno, OldBal, Transtype, TransAmt) VALUES ('T002',2002,3000.00, 'Deposit', 1500.00);
+INSERT INTO Transaction (TransId, Acctno, OldBal, Transtype, TransAmt) VALUES ('T003',2003,1500.00, 'Withdrawal', 1000.00);
+INSERT INTO Transaction (TransId, Acctno, OldBal, Transtype, TransAmt) VALUES ('T004',2004,2000.00, 'Deposit', 100.00);
+INSERT INTO Transaction (TransId, Acctno, OldBal, Transtype, TransAmt) VALUES ('T005',2005,10000.00, 'Withdrawal',11000.00);
+INSERT INTO Transaction (TransId, Acctno, OldBal, Transtype, TransAmt) VALUES ('T006',2006,1000.00, 'Deposit', 300.00);
+INSERT INTO Transaction (TransId, Acctno, OldBal, Transtype, TransAmt) VALUES ('T007',2007,1500.00, 'Withdrawal', 15000.00);
+INSERT INTO Transaction (TransId, Acctno, OldBal, Transtype, TransAmt) VALUES ('T008',2008,1000.00, 'Deposit', 2000.00);
+
+
+
+
+CREATE TABLE validtrans (
+  TransId VARCHAR2(4) PRIMARY KEY,
+  TransType VARCHAR2(20),
+  TransAmt NUMBER,
+  ValidMessage VARCHAR2(20)
+);
+
+
+
+
+CREATE TABLE invalidtrans (
+  TransId VARCHAR2(4),
+  TransType VARCHAR2(20),
+  TransAmt NUMBER,
+  ValidMessage VARCHAR2(20)
+);
